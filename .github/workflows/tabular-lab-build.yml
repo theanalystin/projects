@@ -1,0 +1,18 @@
+name: Tabular Lab build
+
+on:
+  push:
+    paths:
+      - 'tabular-lab/**'
+      - '.github/workflows/tabular-lab-build.yml'
+  pull_request:
+    paths:
+      - 'tabular-lab/**'
+      - '.github/workflows/tabular-lab-build.yml'
+
+jobs:
+  status-note:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain prototype status
+        run: echo 'Tabular Lab is currently documented as a prototype. Add the integrated application package before enabling npm build/test jobs.'
